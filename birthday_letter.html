@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HAPPY  BIRTHDAY TO JAN </title>
+    <link rel="stylesheet" href="hbd.css">
+    <link rel="stylesheet" href="font.css">
+</head>
+<body>
+    <div class="letter-container">
+        <h1 class="title">Happy Birthday ❤️🎂</h1>
+        <div class="letter-box">
+            <p>Dear <span id="recipientName"></span>,</p>
+            <p>
+                Happy birthday to my babe Wishing you a day filled with love and laughter You light up the world every day
+            </p>
+            <p>
+                Best wishes,<br>
+                <span id="senderName"></span>
+            </p>
+        </div>
+        <button onclick="window.location.href='birthday_card.html'"> Next >>> </button>
+    </div>
+    <script>
+        // Load the recipient and sender from local storage
+        document.getElementById('recipientName').textContent = localStorage.getItem('recipient') || '[Your Friend]';
+        document.getElementById('senderName').textContent = localStorage.getItem('sender') || '[Your Name]';
+    </script>
+</body>
+</html>

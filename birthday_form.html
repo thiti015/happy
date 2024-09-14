@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HAPPY  BIRTHDAY TO JAN </title>
+    <link rel="stylesheet" href="hbd.css">
+    <link rel="stylesheet" href="font.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1 class="title"> 🎂🎉 </h1>
+        <div class="input-section">
+            <label for="recipientInput">Recipient's Name:</label>
+            <input type="text" id="recipientInput" placeholder="Enter recipient's name">
+            <br><br>
+            <label for="senderInput">Your Name:</label>
+            <input type="text" id="senderInput" placeholder="Enter your name">
+            <br><br>
+            <button onclick="generateLetter()"> Next >>> </button>
+        </div>
+    </div>
+    <script>
+        function generateLetter() {
+            const recipient = document.getElementById('recipientInput').value;
+            const sender = document.getElementById('senderInput').value;
+            
+            if (recipient && sender) {
+                // Save data to local storage to use on the next page
+                localStorage.setItem('recipient', recipient);
+                localStorage.setItem('sender', sender);
+
+                // Redirect to the letter page
+                window.location.href = 'birthday_letter.html';
+            } else {
+                alert('Please fill in both the recipient and sender names!');
+            }
+        }
+    </script>
+</body>
+</html>
